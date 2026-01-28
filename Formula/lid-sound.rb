@@ -8,10 +8,12 @@ class LidSound < Formula
   depends_on :macos
   depends_on "swift" => :build
 
-  def install
-    system "swift", "build", "-c", "release"
-    bin.install ".build/release/lid-sound"
-  end
+ def install
+  ENV["MACOSX_DEPLOYMENT_TARGET"] = MacOS.version.to_s
+
+  system "swift", "build", "-c", "release", "--disable-sandbox"
+  bin.install ".build/release/lid-sound"
+end
 
   test do
     system "#{bin}/lid-sound", "status"
