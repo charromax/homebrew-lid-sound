@@ -23,11 +23,8 @@ class LidSound < Formula
     # Install executable
     bin.install ".build/release/lid-sound"
 
-    # SwiftPM resources for executables are emitted as a sibling bundle named:
-    #   <target>_<target>.bundle
-    # Bundle.module expects it next to the executable at runtime.
-    bundle = ".build/release/lid-sound_lid-sound.bundle"
-    bin.install bundle if File.exist?(bundle)
+    # Install default sounds into Homebrew share directory
+    (share/"lid-sound/sounds").install Dir["Sources/lid-sound/sounds/*.mp3"]
   end
 
   test do
