@@ -1,8 +1,8 @@
 class LidSound < Formula
   desc "Play sounds on MacBook lid events"
   homepage "https://github.com/charromax/lid-sound"
-  url "https://github.com/charromax/lid-sound/archive/refs/tags/v0.2.0.tar.gz"
-  sha256 "619923fb359a723e5ed8a0cf5beb8d15e47fdf28711d98da505733eefc2c2192"
+  url "https://github.com/charromax/lid-sound/archive/refs/tags/v0.2.1.tar.gz"
+  sha256 "999af280150ec17e0ebc1147911e7c7c62b104a758717a7f17e69e5fc17c5d14"
   license "MIT"
 
   depends_on :macos
