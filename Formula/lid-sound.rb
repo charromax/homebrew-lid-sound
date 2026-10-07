@@ -1,8 +1,8 @@
 class LidSound < Formula
   desc "Play sounds on MacBook lid events"
   homepage "https://github.com/charromax/lid-sound"
-  url "https://github.com/charromax/lid-sound/archive/refs/tags/v0.1.2.tar.gz"
-  sha256 "094a0c01261aeb76f4562cb67cd1b77eb45d5b96b5de4e6dadd14eac482dd5f2"
+  url "https://github.com/charromax/lid-sound/archive/refs/tags/v0.2.1.tar.gz"
+  sha256 "999af280150ec17e0ebc1147911e7c7c62b104a758717a7f17e69e5fc17c5d14"
   license "MIT"
 
   depends_on :macos
@@ -17,6 +17,7 @@ class LidSound < Formula
 
     bin.install ".build/release/lid-sound"
     (share/"lid-sound/sounds").install Dir["Sources/lid-sound/sounds/*.mp3"]
+    (share/"lid-sound").install "Sources/LidSoundCore/Resources/lid-motion-loop.mp3"
   end
 
   test do
